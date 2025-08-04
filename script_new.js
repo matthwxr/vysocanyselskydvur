@@ -1,4 +1,3 @@
-
 // Admin functionality - show print button if ?admin=true in URL
 document.addEventListener('DOMContentLoaded', function() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -166,6 +165,22 @@ document.getElementById('print-daily-menu')?.addEventListener('click', function(
                         h1, h4 {
                             break-after: avoid;
                         }
+                        
+                        /* Skrytí automatických prvků prohlížeče při tisku */
+                        @page {
+                            margin: 10mm;
+                        }
+                    }
+                    
+                    /* Skrytí URL a čísla stránky */
+                    @page {
+                        margin: 10mm;
+                        @top-left { content: none; }
+                        @top-center { content: none; }
+                        @top-right { content: none; }
+                        @bottom-left { content: none; }
+                        @bottom-center { content: none; }
+                        @bottom-right { content: none; }
                     }
                 </style>
             </head>
@@ -174,7 +189,7 @@ document.getElementById('print-daily-menu')?.addEventListener('click', function(
                     <h1>Denní menu</h1>
                     <div class="restaurant-info">
                         <strong>Selský dvůr</strong><br>
-                        Vysočanská 20, Praha 9 | Tel: +420 601 024 486
+                        Vysočany u Znojma 4 | Tel: +420 601 024 486
                     </div>
                 </div>
                 
