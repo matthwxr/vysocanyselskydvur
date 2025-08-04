@@ -551,7 +551,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: clamp(1rem, 2.5vw, 1.125rem);
     line-height: 1.8;
     text-align: justify;
-    color: var(--text-dark);
+    color: var(--primary-color);
     font-weight: 400;
 }
 
@@ -564,7 +564,7 @@ h1, h2, h3, h4, h5, h6 {
 .about-text p:last-of-type {
     margin-bottom: 0;
     font-style: italic;
-    color: var(--accent-color);
+    color: var(--primary-color);
 }
 
 .about-image {
