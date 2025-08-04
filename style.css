@@ -1874,6 +1874,11 @@ h1, h2, h3, h4, h5, h6 {
         text-align: center;
     }
     
+    /* Fix pro barvu textu v About sekci na mobilu */
+    .about-text p {
+        color: var(--primary-color) !important;
+    }
+    
     /* 🎯 RADIKÁLNÍ MOBILE MENU OPTIMALIZACE */
     .menu {
         padding: 1rem 0; /* Ještě více sníženo */
