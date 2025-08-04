@@ -1,3 +1,4 @@
+
 // Admin functionality - show print button if ?admin=true in URL
 document.addEventListener('DOMContentLoaded', function() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -36,52 +37,153 @@ document.getElementById('print-daily-menu')?.addEventListener('click', function(
             <head>
                 <title>Denní menu - Selský dvůr</title>
                 <style>
+                    @page {
+                        size: A4;
+                        margin: 10mm;
+                    }
+                    
                     body {
-                        font-family: Arial, sans-serif;
-                        margin: 20px;
+                        font-family: 'Arial', sans-serif;
+                        margin: 0;
+                        padding: 0;
                         color: #333;
                         background: white;
+                        font-size: 14px;
+                        line-height: 1.4;
                     }
+                    
                     h1 {
                         color: #745842;
                         text-align: center;
                         border-bottom: 3px solid #745842;
                         padding-bottom: 10px;
+                        margin: 0 0 20px 0;
+                        font-size: 24px;
+                        font-weight: bold;
                     }
-                    .menu-content {
-                        margin-top: 20px;
-                    }
-                    .menu-item {
-                        display: flex;
-                        justify-content: space-between;
-                        margin-bottom: 8px;
-                        padding-bottom: 4px;
-                        border-bottom: 1px solid #ddd;
-                    }
+                    
                     h4 {
                         color: #745842;
-                        margin-top: 20px;
-                        margin-bottom: 10px;
+                        margin: 15px 0 10px 0;
                         border-bottom: 2px solid #8b6f47;
                         padding-bottom: 5px;
+                        font-size: 18px;
+                        font-weight: bold;
                     }
+                    
+                    .menu-content {
+                        width: 100%;
+                        max-width: none;
+                    }
+                    
+                    .menu-item {
+                        margin-bottom: 12px;
+                        padding: 8px 0;
+                        border-bottom: 1px solid #ddd;
+                        page-break-inside: avoid;
+                    }
+                    
+                    .menu-item-header {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: flex-start;
+                        margin-bottom: 4px;
+                        flex-wrap: wrap;
+                    }
+                    
                     .item-name {
-                        font-weight: 500;
+                        font-weight: bold;
+                        font-size: 15px;
+                        flex: 1;
+                        margin-right: 10px;
+                        color: #333;
                     }
+                    
+                    .item-weight {
+                        font-weight: normal;
+                        color: #666;
+                        margin-right: 15px;
+                        font-size: 13px;
+                    }
+                    
                     .item-price {
                         font-weight: bold;
                         color: #745842;
+                        font-size: 15px;
+                        min-width: 60px;
+                        text-align: right;
                     }
+                    
+                    .menu-item-allergens {
+                        margin-top: 4px;
+                    }
+                    
+                    .menu-item-allergens small {
+                        color: #666;
+                        font-size: 11px;
+                        line-height: 1.3;
+                        font-style: italic;
+                    }
+                    
+                    /* Header s logem a údaji restaurace */
+                    .print-header {
+                        text-align: center;
+                        margin-bottom: 25px;
+                        border-bottom: 2px solid #745842;
+                        padding-bottom: 15px;
+                    }
+                    
+                    .restaurant-info {
+                        font-size: 12px;
+                        color: #666;
+                        margin-top: 8px;
+                    }
+                    
+                    /* Footer s kontakty */
+                    .print-footer {
+                        position: fixed;
+                        bottom: 10mm;
+                        left: 10mm;
+                        right: 10mm;
+                        text-align: center;
+                        font-size: 11px;
+                        color: #666;
+                        border-top: 1px solid #ddd;
+                        padding-top: 8px;
+                    }
+                    
+                    /* Optimalizace pro tisk */
                     @media print {
-                        body { margin: 0; }
-                        @page { margin: 1cm; }
+                        body {
+                            -webkit-print-color-adjust: exact;
+                            print-color-adjust: exact;
+                        }
+                        
+                        .menu-item {
+                            break-inside: avoid;
+                        }
+                        
+                        h1, h4 {
+                            break-after: avoid;
+                        }
                     }
                 </style>
             </head>
             <body>
-                <h1>Denní menu - Selský dvůr</h1>
+                <div class="print-header">
+                    <h1>Denní menu</h1>
+                    <div class="restaurant-info">
+                        <strong>Selský dvůr</strong><br>
+                        Vysočanská 20, Praha 9 | Tel: +420 601 024 486
+                    </div>
+                </div>
+                
                 <div class="menu-content">
                     ${dailyMenuContent.innerHTML}
+                </div>
+                
+                <div class="print-footer">
+                    Selský dvůr - Tradiční česká kuchyně | www.vysocanyselskydvur.cz | Tel: +420 601 024 486
                 </div>
             </body>
             </html>
