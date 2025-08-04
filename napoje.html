@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Nápoje - Selský dvůr | Pivo, víno, káva a nealkoholické nápoje
+    </title>
+    <meta
+      name="description"
+      content="Široká nabídka nápojů v Selském dvoře - čepované pivo Radegast, kvalitní víno, espresso, nealkoholické nápoje a desítky druhů alkoholu. Vyberte si podle chuti."
+    />
+
+    <!-- Preload kritické zdroje pro rychlejší načítání -->
+    <link
+      rel="preload"
+      href="Selskydvurcelelogo.svg"
+      as="image"
+      type="image/svg+xml"
+    />
+    <link rel="preload" href="DSC_0430.webp" as="image" type="image/webp" />
+
+    <!-- Fonts s display=swap pro lepší performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="Selskydvurcelelogo.svg" />
+    <link rel="apple-touch-icon" href="Selskydvurcelelogo.svg" />
+
+    <!-- Enhanced SEO Meta tags -->
+    <meta
+      property="og:title"
+      content="Nápoje - Selský dvůr | Pivo, víno, káva a nealkoholické nápoje"
+    />
+    <meta
+      property="og:description"
+      content="Široká nabídka nápojů v Selském dvoře - čepované pivo Radegast, kvalitní víno, espresso, nealkoholické nápoje a desítky druhů alkoholu."
+    />
+    <meta property="og:type" content="restaurant" />
+    <meta property="og:url" content="https://selskydvur.cz/napoje.html" />
+    <meta property="og:image" content="DSC_0430.webp" />
+    <meta
+      name="keywords"
+      content="nápoje, pivo, víno, káva, espresso, alkohol, nealkoholické nápoje, čepované pivo, Radegast, whisky, rum"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Selský dvůr" />
+    <meta name="theme-color" content="#745842" />
+
+    <!-- Structured Data pro Google -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Menu",
+        "name": "Nápoje - Selský dvůr",
+        "description": "Kompletní nabídka nápojů - od čepovaného piva po kvalitní kávu",
+        "provider": {
+          "@type": "Restaurant",
+          "name": "Selský dvůr",
+          "telephone": "+420601024486",
+          "email": "vysocanyselskydvur@gmail.com"
+        },
+        "hasMenuSection": [
+          {
+            "@type": "MenuSection",
+            "name": "Pivo",
+            "description": "Čepované pivo Radegast a nealkoholické alternativy"
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Alkoholické nápoje",
+            "description": "Široká nabídka destilátů, likérů a alkoholických nápojů"
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Teplé nápoje",
+            "description": "Kvalitní káva, espresso a široký výběr čajů"
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Nealkoholické nápoje",
+            "description": "Limonády, džusy a osvěžující nealkoholické nápoje"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="index.html" class="logo-link">
+            <img
+              src="Selskydvurcelelogo.svg"
+              alt="Selský dvůr"
+              class="logo-svg"
+            />
+          </a>
+        </div>
+        <div class="nav-menu">
+          <a href="index.html" class="nav-link">Domů</a>
+          <a href="index.html#about" class="nav-link">O nás</a>
+          <a href="menu.html" class="nav-link">Menu</a>
+          <a href="napoje.html" class="nav-link active">Nápoje</a>
+          <a href="index.html#reservations" class="nav-link">Rezervace</a>
+          <a href="index.html#contact" class="nav-link">Kontakt</a>
+          <a href="index.html#gallery" class="nav-link">Galerie</a>
+        </div>
+        <div
+          class="hamburger"
+          aria-label="Otevřít hlavní menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Page Header -->
+      <header class="page-header">
+        <div class="container">
+          <h1 class="page-title">Naše nápoje</h1>
+          <p class="page-subtitle">
+            Od čepovaného piva po kvalitní kávu - vyberte si podle chuti
+          </p>
+        </div>
+      </header>
+
+      <!-- Drinks Menu Section -->
+      <section id="drinks" class="menu">
+        <div class="container">
+          <div class="drinks-menu">
+            <div class="menu-grid">
+              <div class="menu-category">
+                <h2>Nealkoholické nápoje</h2>
+
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name">ZON Limo čepovaná (cimo)</span>
+                      <span class="item-weight">0,3l / 0,5l</span>
+                      <span class="item-price">25 Kč / 35 Kč</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name"
+                        >ZON Limo ve skle, záloha 5 Kč (dle denní nabídky)</span
+                      >
+                      <span class="item-weight">0,33l</span>
+                      <span class="item-price">35 Kč</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name">Džus (dle denní nabídky)</span>
+                      <span class="item-weight">0,2l / 0,3l</span>
+                      <span class="item-price">25 Kč / 35 Kč</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name">Birell ochucený v plechovce</span>
+                      <span class="item-weight">0,5l</span>
+                      <span class="item-price">35 Kč</span>
+                    </div>
+                    <div class="menu-item-allergens">
+                      <small>Alergeny: Obiloviny obsahující lepek</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name"
+                        >Fire Bird energy drink v plechovce</span
+                      >
+                      <span class="item-weight">0,25l</span>
+                      <span class="item-price">20 Kč</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name"
+                        >Red Bull energy drink v plechovce</span
+                      >
+                      <span class="item-weight">0,25l</span>
+                      <span class="item-price">55 Kč</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-category">
+                <h2>Pivo</h2>
+
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name">Radegast 10°</span>
+                      <span class="item-weight">0,3l / 0,5l</span>
+                      <span class="item-price">29 Kč / 38 Kč</span>
+                    </div>
+                    <div class="menu-item-allergens">
+                      <small>Alergeny: Obiloviny obsahující lepek</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name">Radegast 12°</span>
+                      <span class="item-weight">0,3l / 0,5l</span>
+                      <span class="item-price">35 Kč / 44 Kč</span>
+                    </div>
+                    <div class="menu-item-allergens">
+                      <small>Alergeny: Obiloviny obsahující lepek</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name"
+                        >Birell světlý ve skle (nealkoholický)</span
+                      >
+                      <span class="item-weight">0,5l</span>
+                      <span class="item-price">35 Kč</span>
+                    </div>
+                    <div class="menu-item-allergens">
+                      <small>Alergeny: Obiloviny obsahující lepek</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-category">
+                <h2>Alkoholické nápoje</h2>
+
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name">Vaječný koňak</span>
+                      <span class="item-weight">2cl / 4cl</span>
+                      <span class="item-price">20 Kč / 30 Kč</span>
+                    </div>
+                    <div class="menu-item-allergens">
+                      <small>Alergeny: Vejce, Mléko a výrobky z něj</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name">Griotka</span>
+                      <span class="item-weight">2cl / 4cl</span>
+                      <span class="item-price">20 Kč / 30 Kč</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name">Rum Božkov</span>
+                      <span class="item-weight">2cl / 4cl</span>
+                      <span class="item-price">20 Kč / 30 Kč</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name">Vodka</span>
+                      <span class="item-weight">2cl / 4cl</span>
+                      <span class="item-price">20 Kč / 30 Kč</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name">Gin</span>
+                      <span class="item-weight">2cl / 4cl</span>
+                      <span class="item-price">25 Kč / 35 Kč</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name">Fernet original / citrus</span>
+                      <span class="item-weight">2cl / 4cl</span>
+                      <span class="item-price">30 Kč / 50 Kč</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name">Becherovka</span>
+                      <span class="item-weight">2cl / 4cl</span>
+                      <span class="item-price">30 Kč / 50 Kč</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name">Irská whisky Jameson</span>
+                      <span class="item-weight">2cl / 4cl</span>
+                      <span class="item-price">40 Kč / 60 Kč</span>
+                    </div>
+                    <div class="menu-item-allergens">
+                      <small>Alergeny: Obiloviny obsahující lepek</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name">Tullamore Dew</span>
+                      <span class="item-weight">2cl / 4cl</span>
+                      <span class="item-price">45 Kč / 70 Kč</span>
+                    </div>
+                    <div class="menu-item-allergens">
+                      <small>Alergeny: Obiloviny obsahující lepek</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name">Stará Myslivecká</span>
+                      <span class="item-weight">2cl / 4cl</span>
+                      <span class="item-price">25 Kč / 35 Kč</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name">Slivovice</span>
+                      <span class="item-weight">2cl / 4cl</span>
+                      <span class="item-price">25 Kč / 35 Kč</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-category">
+                <h2>Víno</h2>
+
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name"
+                        >Bílé víno (dle denní nabídky)</span
+                      >
+                      <span class="item-weight">2dcl</span>
+                      <span class="item-price">40 Kč</span>
+                    </div>
+                    <div class="menu-item-allergens">
+                      <small>Alergeny: Oxid siřičitý a siřičitany</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name"
+                        >Červené víno (dle denní nabídky)</span
+                      >
+                      <span class="item-weight">2dcl</span>
+                      <span class="item-price">40 Kč</span>
+                    </div>
+                    <div class="menu-item-allergens">
+                      <small>Alergeny: Oxid siřičitý a siřičitany</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-category">
+                <h2>Teplé nápoje</h2>
+
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name">Espresso</span>
+                      <span class="item-weight">30ml</span>
+                      <span class="item-price">39 Kč</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name">Lungo</span>
+                      <span class="item-weight">100ml</span>
+                      <span class="item-price">39 Kč</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name">Turecká káva</span>
+                      <span class="item-weight">150ml</span>
+                      <span class="item-price">45 Kč</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name">Cappuccino</span>
+                      <span class="item-weight">180ml</span>
+                      <span class="item-price">59 Kč</span>
+                    </div>
+                    <div class="menu-item-allergens">
+                      <small>Alergeny: Mléko a výrobky z něj</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name">Flat white</span>
+                      <span class="item-weight">180ml</span>
+                      <span class="item-price">65 Kč</span>
+                    </div>
+                    <div class="menu-item-allergens">
+                      <small>Alergeny: Mléko a výrobky z něj</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name">Latte</span>
+                      <span class="item-weight">280ml</span>
+                      <span class="item-price">59 Kč</span>
+                    </div>
+                    <div class="menu-item-allergens">
+                      <small>Alergeny: Mléko a výrobky z něj</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name"
+                        >Ledová káva se zmrzlinou a šlehačkou</span
+                      >
+                      <span class="item-weight">280ml</span>
+                      <span class="item-price">79 Kč</span>
+                    </div>
+                    <div class="menu-item-allergens">
+                      <small>Alergeny: Mléko a výrobky z něj, Vejce</small>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name">Čaj (dle denní nabídky)</span>
+                      <span class="item-weight">250ml</span>
+                      <span class="item-price">19 Kč</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action Section -->
+      <section class="cta-section">
+        <div class="container">
+          <h2>Něco vás zaujalo?</h2>
+          <p>Podívejte se na naše jídelní menu nebo si rezervujte stůl</p>
+          <div class="cta-buttons">
+            <a
+              href="menu.html"
+              class="cta-button primary"
+              aria-label="Přejít na stránku s jídelním menu"
+            >
+              <i class="fas fa-utensils"></i>
+              Zobrazit jídelní menu
+            </a>
+            <a
+              href="index.html#reservations"
+              class="cta-button secondary"
+              aria-label="Přejít na rezervační sekci"
+            >
+              <i class="fas fa-phone"></i>
+              Rezervovat stůl
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <a href="index.html" class="footer-logo-link">
+              <img src="Selskydvurcelelogo.svg" alt="Selský dvůr" />
+            </a>
+          </div>
+          <div class="footer-links">
+            <a href="index.html">Domů</a>
+            <a href="index.html#about">O nás</a>
+            <a href="menu.html">Menu</a>
+            <a href="napoje.html">Nápoje</a>
+            <a href="index.html#reservations">Rezervace</a>
+            <a href="index.html#contact">Kontakt</a>
+          </div>
+          <div class="footer-social">
+            <a
+              href="https://www.facebook.com/profile.php?id=61578131586095"
+              target="_blank"
+              aria-label="Otevřít Facebook stránku v novém okně"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a
+              href="tel:+420601024486"
+              aria-label="Zavolat na číslo 601 024 486"
+              ><i class="fas fa-phone"></i
+            ></a>
+            <a
+              href="mailto:vysocanyselskydvur@gmail.com"
+              aria-label="Napsat email"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- Rating Section in Footer -->
+        <div class="footer-rating">
+          <h4>Líbí se vám u nás? Ohodnoťte nás!</h4>
+          <div class="rating-buttons-footer">
+            <a
+              href="https://g.page/r/CfNaBrGcGgMy/review"
+              target="_blank"
+              class="google-maps"
+              aria-label="Ohodnotit nás na Google Maps - otevře se v novém okně"
+            >
+              <i class="fab fa-google"></i>
+              Google Maps
+            </a>
+            <a
+              target="_blank"
+              href="https://mapy.com/cs/?source=firm&id=13840736&firmBadge=1"
+              class="mapy-cz"
+              aria-label="Ohodnotit nás na Mapy.com - otevře se v novém okně"
+            >
+              <i class="fas fa-map-marked-alt"></i>
+              Mapy.com
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 Selský dvůr. Všechna práva vyhrazena.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script_new.js"></script>
+  </body>
+</html>

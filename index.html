@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selský dvůr - Tradiční venkovská restaurace | Česká kuchyně</title>
+
+    <meta
+      name="description"
+      content="Vítejte na Selském dvoře - místo, kde se potkává tradice, domácí kuchyně a příjemná atmosféra. Rezervace: +420 601 024 486. Denní menu a tradiční česká jídla."
+    />
+
+    <!-- Preload kritické zdroje pro rychlejší načítání -->
+    <link
+      rel="preload"
+      href="Selskydvurcelelogo.svg"
+      as="image"
+      type="image/svg+xml"
+    />
+    <link rel="preload" href="DSC_0430.webp" as="image" type="image/webp" />
+
+    <!-- Fonts s display=swap pro lepší performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="selskydvurlogo.svg" />
+    <link rel="apple-touch-icon" href="selskydvurlogo.svg" />
+
+    <!-- Enhanced SEO Meta tags -->
+    <meta
+      property="og:title"
+      content="Selský dvůr - Tradiční venkovská restaurace"
+    />
+    <meta
+      property="og:description"
+      content="Vítejte na Selském dvoře - místo, kde se potkává tradice, domácí kuchyně a příjemná atmosféra."
+    />
+    <meta property="og:type" content="restaurant" />
+    <meta property="og:url" content="https://selskydvur.cz" />
+    <meta property="og:image" content="DSC_0430.webp" />
+    <meta
+      name="keywords"
+      content="restaurace, selský dvůr, tradiční kuchyně, české jídlo, venkovská restaurace, minutky, denní menu, česká klasika"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Selský dvůr" />
+    <meta name="theme-color" content="#745842" />
+
+    <!-- Structured Data pro Google -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Selský dvůr",
+        "image": "DSC_0430.webp",
+        "description": "Tradiční venkovská restaurace s domácí kuchyní a příjemnou atmosférou",
+        "telephone": "+420601024486",
+        "email": "vysocanyselskydvur@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "CZ"
+        },
+        "openingHours": [
+          "Tu-Th 11:00-18:00",
+          "Fr-Sa 11:00-22:00",
+          "Su 11:00-18:00"
+        ],
+        "servesCuisine": "Czech",
+        "priceRange": "$",
+        "acceptsReservations": true,
+        "hasMenu": true
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="index.html" class="logo-link">
+            <img
+              src="Selskydvurcelelogo.svg"
+              alt="Selský dvůr"
+              class="logo-svg"
+            />
+          </a>
+        </div>
+        <div class="nav-menu">
+          <a href="index.html" class="nav-link">Domů</a>
+          <a href="#about" class="nav-link">O nás</a>
+          <a href="menu.html" class="nav-link">Menu</a>
+          <a href="napoje.html" class="nav-link">Nápoje</a>
+          <a href="#reservations" class="nav-link">Rezervace</a>
+          <a href="#contact" class="nav-link">Kontakt</a>
+          <a href="#gallery" class="nav-link">Galerie</a>
+        </div>
+        <div
+          class="hamburger"
+          aria-label="Otevřít hlavní menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <div class="hero-logo-container">
+            <img
+              src="Selskydvurcelelogo.svg"
+              alt="Selský dvůr"
+              class="hero-logo-svg"
+            />
+          </div>
+          <p class="hero-text">
+            Poctivé domácí jídlo z Vysočan. Vítejte u nás.
+          </p>
+          <a
+            href="menu.html"
+            class="cta-button"
+            aria-label="Přejít na stránku s jídelním lístkem"
+          >
+            <span>Podívat se na menu</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        <div
+          class="scroll-indicator"
+          aria-label="Posunout se dolů na další sekci"
+        >
+          <div class="scroll-arrow"></div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="about">
+        <div class="container">
+          <div class="about-content">
+            <div class="about-text">
+              <h2 class="section-title">O nás</h2>
+              <p>
+                Selský dvůr ve Vysočanech je místo, kde se ještě vaří tak, jak
+                si to pamatujete od babičky. Poctivá česká kuchyně, která sází
+                na chuť, tradici a pořádné porce. Najdete nás kousek od Vranova
+                a Bítova, v klidné vesnici obklopené přírodou. U nás si můžete
+                dát vydatný oběd, večeři nebo jen posedět s rodinou a na chvíli
+                vypnout u čepovaného piva či kávy.
+              </p>
+              <p>
+                Najdete nás kousek od Vranova a Bítova, v klidné vesnici
+                obklopené přírodou. U nás si můžete dát vydatný oběd, večeři
+                nebo jen posedět s rodinou a na chvíli vypnout u čepovaného piva
+                či kávy.
+              </p>
+              <p>
+                Vaříme jednoduše, z kvalitních surovin a s respektem k tomu, co
+                tu funguje už generace. Přijďte se najíst, zpomalit a zažít
+                pohodu Selského dvora.
+              </p>
+            </div>
+            <div class="about-image">
+              <img src="interior2.webp" alt="Interiér restaurace foto č.1" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reservations Section -->
+      <section id="reservations" class="reservations">
+        <div class="container">
+          <h2 class="section-title">Rezervace</h2>
+          <div class="reservation-content">
+            <div class="reservation-info">
+              <i class="fas fa-phone-alt"></i>
+              <h3>Rezervace přijímáme pouze telefonicky</h3>
+              <a
+                href="tel:+420601024486"
+                class="phone-link"
+                aria-label="Zavolat na číslo 601 024 486 pro rezervaci"
+              >
+                📞 +420 601 024 486
+              </a>
+              <p>Volejte nám a rezervujte si místo u nás!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section id="gallery" class="gallery">
+        <div class="container">
+          <h2 class="section-title">Galerie</h2>
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="interior1.webp" alt="Interiér restaurace 1" />
+            </div>
+            <div class="gallery-item">
+              <img src="jidlo1.webp" alt="Naše specialita 1" />
+            </div>
+            <div class="gallery-item">
+              <img src="interior3.webp" alt="Interiér restaurace 2" />
+            </div>
+            <div class="gallery-item">
+              <img src="jidlo2.webp" alt="Naše specialita 2" />
+            </div>
+            <div class="gallery-item">
+              <img src="interior4.webp" alt="Interiér restaurace 3" />
+            </div>
+            <div class="gallery-item">
+              <img src="kava1.webp" alt="Naše specialita 3" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact">
+        <div class="container">
+          <h2 class="section-title">Kontakt</h2>
+          <div class="contact-content">
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <div>
+                  <h4>Telefon</h4>
+                  <a
+                    href="tel:+420601024486"
+                    aria-label="Zavolat na číslo 601 024 486"
+                    >+420 601 024 486</a
+                  >
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <h4>Email</h4>
+                  <a href="mailto:vysocanyselskydvur@gmail.com"
+                    >vysocanyselskydvur@gmail.com</a
+                  >
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fab fa-facebook"></i>
+                <div>
+                  <h4>Facebook</h4>
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61578131586095"
+                    target="_blank"
+                    >Selský dvůr</a
+                  >
+                </div>
+              </div>
+
+              <div class="opening-hours">
+                <h4>Otevírací doba</h4>
+                <table>
+                  <tr>
+                    <td>Pondělí</td>
+                    <td>Zavřeno</td>
+                  </tr>
+                  <tr>
+                    <td>Úterý - Čtvrtek</td>
+                    <td>11:00 - 18:00</td>
+                  </tr>
+                  <tr>
+                    <td>Pátek - Sobota</td>
+                    <td>11:00 - 22:00</td>
+                  </tr>
+                  <tr>
+                    <td>Neděle</td>
+                    <td>11:00 - 18:00</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2620.6727863226424!2d15.686448576870399!3d48.940673894912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4772b57819bf840f%3A0x324b659670705a83!2zU2Vsc2vDvSBkdsWvcg!5e0!3m2!1scs!2scz!4v1753736106489!5m2!1scs!2scz"
+                width="100%"
+                height="400"
+                style="border: 0; border-radius: 10px"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Mapa - Selský dvůr"
+              >
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <a href="index.html" class="footer-logo-link">
+              <img src="Selskydvurcelelogo.svg" alt="Selský dvůr" />
+            </a>
+          </div>
+          <div class="footer-links">
+            <a href="index.html">Domů</a>
+            <a href="#about">O nás</a>
+            <a href="menu.html">Menu</a>
+            <a href="napoje.html">Nápoje</a>
+            <a href="#reservations">Rezervace</a>
+            <a href="#contact">Kontakt</a>
+          </div>
+          <div class="footer-social">
+            <a
+              href="https://www.facebook.com/profile.php?id=61578131586095"
+              target="_blank"
+              aria-label="Otevřít Facebook stránku v novém okně"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a
+              href="tel:+420601024486"
+              aria-label="Zavolat na číslo 601 024 486"
+              ><i class="fas fa-phone"></i
+            ></a>
+            <a
+              href="mailto:vysocanyselskydvur@gmail.com"
+              aria-label="Napsat email"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- Rating Section in Footer -->
+        <div class="footer-rating">
+          <h4>Líbí se vám u nás? Ohodnoťte nás!</h4>
+          <div class="rating-buttons-footer">
+            <a
+              href="https://maps.app.goo.gl/2vGKg3ixCHfqehU77"
+              target="_blank"
+              class="google-maps"
+              aria-label="Ohodnotit nás na Google Maps - otevře se v novém okně"
+            >
+              <i class="fab fa-google"></i>
+              Google Maps
+            </a>
+            <a
+              target="_blank"
+              href="https://mapy.com/s/guzuladuna"
+              class="mapy-cz"
+              aria-label="Ohodnotit nás na Mapy.com - otevře se v novém okně"
+            >
+              <i class="fas fa-map-marked-alt"></i>
+              Mapy.com
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span
+            >Vytvořil
+            <a href="https://www.instagram.com/matejfilipsky/" target="_blank"
+              >Matěj Filipský</a
+            ></span
+          >
+          <p>&copy; 2025 Selský dvůr. Všechna práva vyhrazena.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script_new.js"></script>
+  </body>
+</html>

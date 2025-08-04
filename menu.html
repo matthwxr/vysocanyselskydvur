@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu - Selský dvůr | Tradiční česká kuchyně a denní menu</title>
+    <meta
+      name="description"
+      content="Objevte naše bohaté menu plné tradičních českých jídel, minutek a denního menu. Selský dvůr - autentická venkovská kuchyně s čerstvými surovinami."
+    />
+
+    <!-- Preload kritické zdroje pro rychlejší načítání -->
+    <link
+      rel="preload"
+      href="Selskydvurcelelogo.svg"
+      as="image"
+      type="image/svg+xml"
+    />
+        <link
+      rel="preload"
+      href="DSC_0430.webp"
+      as="image"
+      type="image/webp"
+    />
+
+    <!-- Fonts s display=swap pro lepší performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="Selskydvurcelelogo.svg" />
+    <link rel="apple-touch-icon" href="Selskydvurcelelogo.svg" />
+
+    <!-- Enhanced SEO Meta tags -->
+    <meta
+      property="og:title"
+      content="Menu - Selský dvůr | Tradiční česká kuchyně"
+    />
+    <meta
+      property="og:description"
+      content="Objevte naše bohaté menu plné tradičních českých jídel, minutek a denního menu. Autentická venkovská kuchyně s čerstvými surovinami."
+    />
+    <meta property="og:type" content="restaurant" />
+    <meta property="og:url" content="https://selskydvur.cz/menu.html" />
+    <meta property="og:image" content="DSC_0430.webp" />
+    <meta
+      name="keywords"
+      content="menu, jídelní lístek, denní menu, minutky, tradiční česká kuchyně, vepřové, kuřecí, vegetariánská jídla, saláty, přílohy"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Selský dvůr" />
+    <meta name="theme-color" content="#745842" />
+
+    <!-- Structured Data pro Google -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Menu",
+        "name": "Menu - Selský dvůr",
+        "description": "Tradiční česká kuchyně s denním menu a minutkami",
+        "provider": {
+          "@type": "Restaurant",
+          "name": "Selský dvůr",
+          "telephone": "+420601024486",
+          "email": "vysocanyselskydvur@gmail.com"
+        },
+        "hasMenuSection": [
+          {
+            "@type": "MenuSection",
+            "name": "Denní menu",
+            "description": "Každodenní nabídka čerstvě připravených jídel"
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Minutky z vepřového masa",
+            "description": "Rychle připravované speciality z vepřového masa"
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Minutky z kuřecího masa",
+            "description": "Rychle připravované speciality z kuřecího masa"
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Vegetariánská a veganská jídla",
+            "description": "Bezmasá jídla pro vegetariány a vegany"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="index.html" class="logo-link">
+            <img
+              src="Selskydvurcelelogo.svg"
+              alt="Selský dvůr"
+              class="logo-svg"
+            />
+          </a>
+        </div>
+        <div class="nav-menu">
+          <a href="index.html" class="nav-link">Domů</a>
+          <a href="index.html#about" class="nav-link">O nás</a>
+          <a href="menu.html" class="nav-link active">Menu</a>
+          <a href="napoje.html" class="nav-link">Nápoje</a>
+          <a href="index.html#reservations" class="nav-link">Rezervace</a>
+          <a href="index.html#contact" class="nav-link">Kontakt</a>
+          <a href="index.html#gallery" class="nav-link">Galerie</a>
+        </div>
+        <div class="hamburger" aria-label="Otevřít hlavní menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Page Header -->
+      <header class="page-header">
+        <div class="container">
+          <h1 class="page-title">Naše menu</h1>
+          <p class="page-subtitle">
+            Objevte tradiční českou kuchyni s moderním nádechem
+          </p>
+        </div>
+      </header>
+
+      <!-- Menu Section -->
+      <section id="menu" class="menu">
+        <div class="container">
+          <!-- Daily Menu -->
+          <div class="daily-menu">
+            <h2>Denní menu</h2>
+            <button
+              id="print-daily-menu"
+              class="print-button"
+              style="display: none"
+            >
+              <i class="fas fa-print"></i> Tisknout denní menu
+            </button>
+
+            <!-- Custom Daily Menu that looks like our static menu -->
+            <div class="daily-menu-custom">
+              <div class="menu-grid">
+                <div class="menu-category">
+                  <!-- Content will be loaded from Google Sheets CSV via JavaScript -->
+                  <div style="text-align: center; padding: 2rem; opacity: 0.7">
+                    <i
+                      class="fas fa-spinner fa-spin"
+                      style="font-size: 2rem; margin-bottom: 1rem"
+                    ></i>
+                    <p>Načítám denní menu...</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Menu -->
+          <div class="main-menu">
+            <h2>Hlavní jídelní lístek</h2>
+
+            <!-- Hlavní jídla - vedle sebe na desktop -->
+            <div class="main-dishes-grid">
+              <div class="menu-category">
+                <h3>Naše minutky z vepřového masa</h3>
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name">Vepřový řízek, citrón</span>
+                      <span class="item-weight">130g</span>
+                      <span class="item-price">139 Kč</span>
+                    </div>
+                    <div class="menu-item-allergens">
+                      <small
+                        >Alergeny: Obiloviny obsahující lepek, Vejce, Mléko a
+                        výrobky z něj</small
+                      >
+                    </div>
+                    <div class="choose-side-link">
+                      <a href="#prilohy" class="side-link">Vybrat přílohu →</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name"
+                        >Katův šleh (pikantní/nepikantní)</span
+                      >
+                      <span class="item-weight">150g</span>
+                      <span class="item-price">139 Kč</span>
+                    </div>
+                    <div class="menu-item-allergens">
+                      <small>Alergeny: Obiloviny obsahující lepek</small>
+                    </div>
+                    <div class="choose-side-link">
+                      <a href="#prilohy" class="side-link">Vybrat přílohu →</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-category">
+                <h3>Naše minutky z kuřecího masa</h3>
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name">Kuřecí řízek</span>
+                      <span class="item-weight">130g</span>
+                      <span class="item-price">139 Kč</span>
+                    </div>
+                    <div class="menu-item-allergens">
+                      <small
+                        >Alergeny: Obiloviny obsahující lepek, Vejce, Mléko a
+                        výrobky z něj</small
+                      >
+                    </div>
+                    <div class="choose-side-link">
+                      <a href="#prilohy" class="side-link">Vybrat přílohu →</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name"
+                        >Penne s kuřecími nudličkami ve smetanovo-hořčičové
+                        omáčce</span
+                      >
+                      <span class="item-weight">300g</span>
+                      <span class="item-price">189 Kč</span>
+                    </div>
+                    <div class="menu-item-allergens">
+                      <small
+                        >Alergeny: Obiloviny obsahující lepek, Mléko a výrobky z
+                        něj, Hořčice</small
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-category">
+                <h3>Vegetariánská a veganská jídla</h3>
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name">Smažený sýr + obloha</span>
+                      <span class="item-weight">125g</span>
+                      <span class="item-price">129 Kč</span>
+                    </div>
+                    <div class="menu-item-allergens">
+                      <small
+                        >Alergeny: Obiloviny obsahující lepek, Vejce, Mléko a
+                        výrobky z něj</small
+                      >
+                    </div>
+                    <div class="choose-side-link">
+                      <a href="#prilohy" class="side-link">Vybrat přílohu →</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name">Smažený hermelín + obloha</span>
+                      <span class="item-weight">100g</span>
+                      <span class="item-price">129 Kč</span>
+                    </div>
+                    <div class="menu-item-allergens">
+                      <small
+                        >Alergeny: Obiloviny obsahující lepek, Vejce, Mléko a
+                        výrobky z něj</small
+                      >
+                    </div>
+                    <div class="choose-side-link">
+                      <a href="#prilohy" class="side-link">Vybrat přílohu →</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-category">
+                <h3>Saláty</h3>
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name"
+                        >Selský Salát s kuřecím masem</span
+                      >
+                      <span class="item-weight">250g</span>
+                      <span class="item-price">139 Kč</span>
+                    </div>
+                    <div class="menu-item-allergens">
+                      <small
+                        >Alergeny: Vejce, Mléko a výrobky z něj, Hořčice</small
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name">Šopský salát</span>
+                      <span class="item-weight">250g</span>
+                      <span class="item-price">129 Kč</span>
+                    </div>
+                    <div class="menu-item-allergens">
+                      <small>Alergeny: Mléko a výrobky z něj</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-category">
+                <h3>Sladké pokrmy</h3>
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name"
+                        >Palačinky s marmeládou, sezónním ovocem a šlehačkou
+                        (3ks)</span
+                      >
+                      <span class="item-weight">180g</span>
+                      <span class="item-price">119 Kč</span>
+                    </div>
+                    <div class="menu-item-allergens">
+                      <small
+                        >Alergeny: Obiloviny obsahující lepek, Vejce, Mléko a
+                        výrobky z něj</small
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Přílohy a omáčky - pod hlavními jídly -->
+            <div class="side-dishes-grid" id="prilohy">
+              <div class="menu-category">
+                <h3>Přílohy</h3>
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name">Smažené hranolky</span>
+                      <span class="item-weight">180g</span>
+                      <span class="item-price">49 Kč</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name">Vařené brambory</span>
+                      <span class="item-weight">200g</span>
+                      <span class="item-price">47 Kč</span>
+                    </div>
+                    <div class="menu-item-allergens">
+                      <small>Alergeny: Mléko a výrobky z něj</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name">Opékané brambory</span>
+                      <span class="item-weight">180g</span>
+                      <span class="item-price">47 Kč</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name">Dušená rýže</span>
+                      <span class="item-weight">180g</span>
+                      <span class="item-price">47 Kč</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name"
+                        >Domácí houskový knedlík (5ks)</span
+                      >
+                      <span class="item-weight">200g</span>
+                      <span class="item-price">45 Kč</span>
+                    </div>
+                    <div class="menu-item-allergens">
+                      <small
+                        >Alergeny: Obiloviny obsahující lepek, Vejce, Mléko a
+                        výrobky z něj</small
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name"
+                        >Čerstvé řemeslné pečivo (chléb, houska)</span
+                      >
+                      <span class="item-weight">1 ks</span>
+                      <span class="item-price">9 Kč</span>
+                    </div>
+                    <div class="menu-item-allergens">
+                      <small>Alergeny: Obiloviny obsahující lepek</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-category">
+                <h3>Omáčky</h3>
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name">Domácí tatarská omáčka</span>
+                      <span class="item-weight">50g</span>
+                      <span class="item-price">20 Kč</span>
+                    </div>
+                    <div class="menu-item-allergens">
+                      <small>Alergeny: Vejce, Hořčice</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name"
+                        >Ďábelská omáčka (Carolina reaper, Habanero)</span
+                      >
+                      <span class="item-weight">50g</span>
+                      <span class="item-price">25 Kč</span>
+                    </div>
+                    <div class="menu-item-allergens">
+                      <small>Alergeny: Vejce, Hořčice</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="menu-item">
+                  <div class="menu-item-content">
+                    <div class="menu-item-header">
+                      <span class="item-name">Kečup</span>
+                      <span class="item-weight">50g</span>
+                      <span class="item-price">20 Kč</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action Section -->
+      <section class="cta-section">
+        <div class="container">
+          <h2>Máte chuť na naše speciality?</h2>
+          <p>Rezervujte si místo nebo se podívejte na naše nápoje</p>
+          <div class="cta-buttons">
+            <a
+              href="index.html#reservations"
+              class="cta-button primary"
+              aria-label="Přejít na rezervační sekci"
+            >
+              <i class="fas fa-phone"></i>
+              Rezervovat stůl
+            </a>
+            <a
+              href="napoje.html"
+              class="cta-button secondary"
+              aria-label="Přejít na stránku s nápoji"
+            >
+              <i class="fas fa-glass-cheers"></i>
+              Zobrazit nápoje
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <a href="index.html" class="footer-logo-link">
+              <img src="Selskydvurcelelogo.svg" alt="Selský dvůr" />
+            </a>
+          </div>
+          <div class="footer-links">
+            <a href="index.html">Domů</a>
+            <a href="index.html#about">O nás</a>
+            <a href="menu.html">Menu</a>
+            <a href="napoje.html">Nápoje</a>
+            <a href="index.html#reservations">Rezervace</a>
+            <a href="index.html#contact">Kontakt</a>
+          </div>
+          <div class="footer-social">
+            <a
+              href="https://www.facebook.com/profile.php?id=61578131586095"
+              target="_blank"
+              aria-label="Otevřít Facebook stránku v novém okně"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a
+              href="tel:+420601024486"
+              aria-label="Zavolat na číslo 601 024 486"
+              ><i class="fas fa-phone"></i
+            ></a>
+            <a
+              href="mailto:vysocanyselskydvur@gmail.com"
+              aria-label="Napsat email"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- Rating Section in Footer -->
+        <div class="footer-rating">
+          <h4>Líbí se vám u nás? Ohodnoťte nás!</h4>
+          <div class="rating-buttons-footer">
+            <a
+              href="https://g.page/r/CfNaBrGcGgMy/review"
+              target="_blank"
+              class="google-maps"
+              aria-label="Ohodnotit nás na Google Maps - otevře se v novém okně"
+            >
+              <i class="fab fa-google"></i>
+              Google Maps
+            </a>
+            <a
+              target="_blank"
+              href="https://mapy.com/cs/?source=firm&id=13840736&firmBadge=1"
+              class="mapy-cz"
+              aria-label="Ohodnotit nás na Mapy.com - otevře se v novém okně"
+            >
+              <i class="fas fa-map-marked-alt"></i>
+              Mapy.com
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 Selský dvůr. Všechna práva vyhrazena.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script_new.js"></script>
+  </body>
+</html>

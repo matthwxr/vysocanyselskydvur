@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Selský dvůr</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'rustic-brown': '#745842',
+                        'rustic-light': '#8b6f47',
+                        'rustic-beige': '#f7f5f3',
+                        'rustic-green': '#7c8471',
+                        'rustic-dark': '#5a4332',
+                    },
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'serif'],
+                        'sans': ['Source Sans Pro', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+    </style>
+</head>
+<body class="bg-rustic-beige font-sans">
+    <!-- Header -->
+    <header class="bg-rustic-brown text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <h1 class="font-serif text-2xl md:text-3xl font-bold text-center">
+                Selský dvůr - Jídelní lístek
+            </h1>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8 max-w-6xl">
+        
+        <!-- Drinks Section -->
+        <section class="mb-12">
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-rustic-brown mb-8 text-center border-b-4 border-rustic-light pb-4">
+                Nápoje
+            </h2>
+            
+            <!-- Drinks Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+                
+                <!-- Nealkoholické nápoje -->
+                <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-rustic-green">
+                    <h3 class="font-serif text-xl font-semibold text-rustic-brown mb-4 border-b border-gray-200 pb-2">
+                        Nealkoholické nápoje
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Coca Cola</span>
+                                <span class="text-sm text-gray-500 ml-2">0,33l</span>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">35 Kč</span>
+                        </div>
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Sprite</span>
+                                <span class="text-sm text-gray-500 ml-2">0,33l</span>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">35 Kč</span>
+                        </div>
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Fanta</span>
+                                <span class="text-sm text-gray-500 ml-2">0,33l</span>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">35 Kč</span>
+                        </div>
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Dobrá voda</span>
+                                <span class="text-sm text-gray-500 ml-2">0,33l</span>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">25 Kč</span>
+                        </div>
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Džus pomerančový</span>
+                                <span class="text-sm text-gray-500 ml-2">0,2l</span>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">30 Kč</span>
+                        </div>
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Džus jablečný</span>
+                                <span class="text-sm text-gray-500 ml-2">0,2l</span>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">30 Kč</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pivo -->
+                <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-amber-500">
+                    <h3 class="font-serif text-xl font-semibold text-rustic-brown mb-4 border-b border-gray-200 pb-2">
+                        Pivo
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Pilsner Urquell</span>
+                                <span class="text-sm text-gray-500 ml-2">0,5l</span>
+                                <div class="text-sm text-gray-400">Čepované světlé</div>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">45 Kč</span>
+                        </div>
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Gambrinus</span>
+                                <span class="text-sm text-gray-500 ml-2">0,5l</span>
+                                <div class="text-sm text-gray-400">Čepované světlé</div>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">40 Kč</span>
+                        </div>
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Kozel Dark</span>
+                                <span class="text-sm text-gray-500 ml-2">0,5l</span>
+                                <div class="text-sm text-gray-400">Čepované tmavé</div>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">42 Kč</span>
+                        </div>
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Radegast</span>
+                                <span class="text-sm text-gray-500 ml-2">0,33l</span>
+                                <div class="text-sm text-gray-400">Lahvové</div>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">35 Kč</span>
+                        </div>
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Birell</span>
+                                <span class="text-sm text-gray-500 ml-2">0,33l</span>
+                                <div class="text-sm text-gray-400">Nealkoholické</div>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">32 Kč</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Alkoholické nápoje -->
+                <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-red-500">
+                    <h3 class="font-serif text-xl font-semibold text-rustic-brown mb-4 border-b border-gray-200 pb-2">
+                        Alkoholické nápoje
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Becherovka</span>
+                                <span class="text-sm text-gray-500 ml-2">0,04l</span>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">55 Kč</span>
+                        </div>
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Slivovice</span>
+                                <span class="text-sm text-gray-500 ml-2">0,04l</span>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">65 Kč</span>
+                        </div>
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Vodka</span>
+                                <span class="text-sm text-gray-500 ml-2">0,04l</span>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">50 Kč</span>
+                        </div>
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Rum</span>
+                                <span class="text-sm text-gray-500 ml-2">0,04l</span>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">50 Kč</span>
+                        </div>
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Whisky</span>
+                                <span class="text-sm text-gray-500 ml-2">0,04l</span>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">70 Kč</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Víno -->
+                <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-purple-500">
+                    <h3 class="font-serif text-xl font-semibold text-rustic-brown mb-4 border-b border-gray-200 pb-2">
+                        Víno
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Ryzlink vlašský</span>
+                                <span class="text-sm text-gray-500 ml-2">0,2l</span>
+                                <div class="text-sm text-gray-400">Bílé suché</div>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">55 Kč</span>
+                        </div>
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Müller Thurgau</span>
+                                <span class="text-sm text-gray-500 ml-2">0,2l</span>
+                                <div class="text-sm text-gray-400">Bílé polosladké</div>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">50 Kč</span>
+                        </div>
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Frankovka</span>
+                                <span class="text-sm text-gray-500 ml-2">0,2l</span>
+                                <div class="text-sm text-gray-400">Červené suché</div>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">58 Kč</span>
+                        </div>
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Rulandské modré</span>
+                                <span class="text-sm text-gray-500 ml-2">0,2l</span>
+                                <div class="text-sm text-gray-400">Červené polosladké</div>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">55 Kč</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Teplé nápoje -->
+                <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-orange-500">
+                    <h3 class="font-serif text-xl font-semibold text-rustic-brown mb-4 border-b border-gray-200 pb-2">
+                        Teplé nápoje
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Espresso</span>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">25 Kč</span>
+                        </div>
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Káva turecká</span>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">30 Kč</span>
+                        </div>
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Cappuccino</span>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">35 Kč</span>
+                        </div>
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Čaj černý</span>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">20 Kč</span>
+                        </div>
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Čaj zelený</span>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">22 Kč</span>
+                        </div>
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Čaj bylinkový</span>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">25 Kč</span>
+                        </div>
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Horká čokoláda</span>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">40 Kč</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Food Section -->
+        <section class="mb-12">
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-rustic-brown mb-8 text-center border-b-4 border-rustic-light pb-4">
+                Jídla
+            </h2>
+            
+            <!-- Food Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                
+                <!-- Polévky -->
+                <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-rustic-green">
+                    <h3 class="font-serif text-xl font-semibold text-rustic-brown mb-4 border-b border-gray-200 pb-2">
+                        Polévky
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Bramborová s houbami</span>
+                                <div class="text-sm text-gray-500">Tradiční česká polévka s lesními houbami</div>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">45 Kč</span>
+                        </div>
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Gulášová</span>
+                                <div class="text-sm text-gray-500">Vydatná polévka s masem a paprikou</div>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">55 Kč</span>
+                        </div>
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Zelňačka</span>
+                                <div class="text-sm text-gray-500">S uzeným masem a klobásou</div>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">50 Kč</span>
+                        </div>
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Kuřecí vývar s nudlemi</span>
+                                <div class="text-sm text-gray-500">Domácí nudle, mrkev, petržel</div>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">40 Kč</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hlavní jídla -->
+                <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-rustic-brown">
+                    <h3 class="font-serif text-xl font-semibold text-rustic-brown mb-4 border-b border-gray-200 pb-2">
+                        Hlavní jídla
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="border-b border-gray-100 pb-3">
+                            <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                                <div class="flex-1">
+                                    <span class="font-medium text-gray-800">Smažený sýr</span>
+                                    <span class="text-sm text-gray-500 ml-2">150g</span>
+                                    <div class="text-sm text-gray-500">S oblohou</div>
+                                </div>
+                                <span class="font-semibold text-rustic-brown ml-4">129 Kč</span>
+                            </div>
+                            <a href="#prilohy" class="inline-block mt-2 text-sm text-rustic-brown hover:text-rustic-dark font-medium transition-colors cursor-pointer">
+                                Vybrat přílohu →
+                            </a>
+                        </div>
+                        
+                        <div class="border-b border-gray-100 pb-3">
+                            <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                                <div class="flex-1">
+                                    <span class="font-medium text-gray-800">Smažený hermelín</span>
+                                    <span class="text-sm text-gray-500 ml-2">100g</span>
+                                    <div class="text-sm text-gray-500">S oblohou a brusinkami</div>
+                                </div>
+                                <span class="font-semibold text-rustic-brown ml-4">139 Kč</span>
+                            </div>
+                            <a href="#prilohy" class="inline-block mt-2 text-sm text-rustic-brown hover:text-rustic-dark font-medium transition-colors cursor-pointer">
+                                Vybrat přílohu →
+                            </a>
+                        </div>
+                        
+                        <div class="border-b border-gray-100 pb-3">
+                            <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                                <div class="flex-1">
+                                    <span class="font-medium text-gray-800">Kuřecí řízek</span>
+                                    <span class="text-sm text-gray-500 ml-2">150g</span>
+                                    <div class="text-sm text-gray-500">Obalovaný, s citrónem</div>
+                                </div>
+                                <span class="font-semibold text-rustic-brown ml-4">149 Kč</span>
+                            </div>
+                            <a href="#prilohy" class="inline-block mt-2 text-sm text-rustic-brown hover:text-rustic-dark font-medium transition-colors cursor-pointer">
+                                Vybrat přílohu →
+                            </a>
+                        </div>
+                        
+                        <div class="border-b border-gray-100 pb-3">
+                            <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                                <div class="flex-1">
+                                    <span class="font-medium text-gray-800">Vepřový řízek</span>
+                                    <span class="text-sm text-gray-500 ml-2">150g</span>
+                                    <div class="text-sm text-gray-500">Obalovaný, s citrónem</div>
+                                </div>
+                                <span class="font-semibold text-rustic-brown ml-4">159 Kč</span>
+                            </div>
+                            <a href="#prilohy" class="inline-block mt-2 text-sm text-rustic-brown hover:text-rustic-dark font-medium transition-colors cursor-pointer">
+                                Vybrat přílohu →
+                            </a>
+                        </div>
+                        
+                        <div class="border-b border-gray-100 pb-3">
+                            <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                                <div class="flex-1">
+                                    <span class="font-medium text-gray-800">Kančí guláš</span>
+                                    <span class="text-sm text-gray-500 ml-2">200g</span>
+                                    <div class="text-sm text-gray-500">S cibulkou a paprikou</div>
+                                </div>
+                                <span class="font-semibold text-rustic-brown ml-4">179 Kč</span>
+                            </div>
+                            <a href="#prilohy" class="inline-block mt-2 text-sm text-rustic-brown hover:text-rustic-dark font-medium transition-colors cursor-pointer">
+                                Vybrat přílohu →
+                            </a>
+                        </div>
+                        
+                        <div class="border-b border-gray-100 pb-3">
+                            <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                                <div class="flex-1">
+                                    <span class="font-medium text-gray-800">Svíčková na smetaně</span>
+                                    <span class="text-sm text-gray-500 ml-2">150g</span>
+                                    <div class="text-sm text-gray-500">S knedlíkem, šlehačkou a brusinkami</div>
+                                </div>
+                                <span class="font-semibold text-rustic-brown ml-4">189 Kč</span>
+                            </div>
+                        </div>
+                        
+                        <div class="border-b border-gray-100 pb-3">
+                            <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                                <div class="flex-1">
+                                    <span class="font-medium text-gray-800">Grilovaná kuřecí prsa</span>
+                                    <span class="text-sm text-gray-500 ml-2">200g</span>
+                                    <div class="text-sm text-gray-500">Se zeleninovým salátem</div>
+                                </div>
+                                <span class="font-semibold text-rustic-brown ml-4">169 Kč</span>
+                            </div>
+                            <a href="#prilohy" class="inline-block mt-2 text-sm text-rustic-brown hover:text-rustic-dark font-medium transition-colors cursor-pointer">
+                                Vybrat přílohu →
+                            </a>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                                <div class="flex-1">
+                                    <span class="font-medium text-gray-800">Hovězí na grilu</span>
+                                    <span class="text-sm text-gray-500 ml-2">200g</span>
+                                    <div class="text-sm text-gray-500">Steak s bylinkovým máslem</div>
+                                </div>
+                                <span class="font-semibold text-rustic-brown ml-4">239 Kč</span>
+                            </div>
+                            <a href="#prilohy" class="inline-block mt-2 text-sm text-rustic-brown hover:text-rustic-dark font-medium transition-colors cursor-pointer">
+                                Vybrat přílohu →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Přílohy Section -->
+        <section id="prilohy" class="mb-12">
+            <h2 class="font-serif text-3xl md:text-4xl font-bold text-rustic-brown mb-8 text-center border-b-4 border-rustic-light pb-4">
+                Přílohy
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-rustic-light">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Smažené hranolky</span>
+                                <span class="text-sm text-gray-500 ml-2">150g</span>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">45 Kč</span>
+                        </div>
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Vařené brambory</span>
+                                <span class="text-sm text-gray-500 ml-2">150g</span>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">35 Kč</span>
+                        </div>
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Bramborová kaše</span>
+                                <span class="text-sm text-gray-500 ml-2">150g</span>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">40 Kč</span>
+                        </div>
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Opečené brambory</span>
+                                <span class="text-sm text-gray-500 ml-2">150g</span>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">45 Kč</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-rustic-light">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Rýže loupaná</span>
+                                <span class="text-sm text-gray-500 ml-2">150g</span>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">40 Kč</span>
+                        </div>
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Těstoviny</span>
+                                <span class="text-sm text-gray-500 ml-2">150g</span>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">40 Kč</span>
+                        </div>
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Houskový knedlík</span>
+                                <span class="text-sm text-gray-500 ml-2">4 ks</span>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">35 Kč</span>
+                        </div>
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Bramborový knedlík</span>
+                                <span class="text-sm text-gray-500 ml-2">4 ks</span>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">35 Kč</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-6 border-l-4 border-rustic-green">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Zelný salát</span>
+                                <span class="text-sm text-gray-500 ml-2">100g</span>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">25 Kč</span>
+                        </div>
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Okurkový salát</span>
+                                <span class="text-sm text-gray-500 ml-2">100g</span>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">30 Kč</span>
+                        </div>
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Rajčatový salát</span>
+                                <span class="text-sm text-gray-500 ml-2">100g</span>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">35 Kč</span>
+                        </div>
+                        <div class="flex justify-between items-start hover:bg-gray-50 p-2 rounded transition-colors">
+                            <div class="flex-1">
+                                <span class="font-medium text-gray-800">Zelená zelenina</span>
+                                <span class="text-sm text-gray-500 ml-2">100g</span>
+                                <div class="text-sm text-gray-400">Brokolice, hrášek, fazolky</div>
+                            </div>
+                            <span class="font-semibold text-rustic-brown ml-4">40 Kč</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-rustic-brown text-white py-8 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="font-serif text-2xl mb-4">Selský dvůr</h3>
+            <p class="text-rustic-beige mb-4">Tradiční česká kuchyně v srdci venkova</p>
+            <div class="text-sm text-gray-300">
+                <p>Otevírací doba: Po-Ne 11:00 - 22:00</p>
+                <p class="mt-2">Rezervace: +420 123 456 789</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

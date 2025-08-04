@@ -1,0 +1,32 @@
+{
+  "soup": {
+    "weight": "300ml",
+    "name": "Gulášová polévka",
+    "allergens": "1,3,7",
+    "price": "50 Kč"
+  },
+  "menu1": {
+    "weight": "400g", 
+    "name": "Svíčková na smetaně s houskovým knedlíkem",
+    "allergens": "1,3,7",
+    "price": "195 Kč"
+  },
+  "menu2": {
+    "weight": "350g",
+    "name": "Kuřecí řízek s bramborovým salátem", 
+    "allergens": "1,3",
+    "price": "165 Kč"
+  },
+  "menu3": {
+    "weight": "400g",
+    "name": "Vegetariánské rizoto s houbami",
+    "allergens": "7,9",
+    "price": "140 Kč"
+  },
+  "dessert": {
+    "weight": "150g",
+    "name": "Palačinky s domácí marmeládou",
+    "allergens": "1,3,7",
+    "price": "65 Kč"
+  }
+}
